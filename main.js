@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ===== Scroll Reveal ===== */
+  /* ===== Section Reveal (3D 느낌) ===== */
   const sections = document.querySelectorAll(".section");
 
   const observer = new IntersectionObserver(
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sections.forEach(section => observer.observe(section));
 
-  /* ===== Rotating Text ===== */
+  /* ===== Rotating Text (Cinematic) ===== */
   const words = ["우리가 함께", "당신이", "내가", "다같이"];
   const target = document.getElementById("rotate-text");
   let index = 0;
@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       target.classList.remove("fade-out");
       target.classList.add("fade-in");
-    }, 600);
+    }, 700);
   };
 
-  setInterval(changeText, 3400);
+  setInterval(changeText, 3800);
 });
