@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* ===== Section reveal ===== */
+
+  /* ===== Scroll Reveal ===== */
   const sections = document.querySelectorAll(".section");
 
   const observer = new IntersectionObserver(
@@ -10,19 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.18 }
   );
 
   sections.forEach(section => observer.observe(section));
 
-  /* ===== Smooth Rotating Text ===== */
+  /* ===== Rotating Text ===== */
   const words = ["우리가 함께", "당신이", "내가", "다같이"];
-  let index = 0;
   const target = document.getElementById("rotate-text");
+  let index = 0;
 
   if (!target) return;
 
-  // 첫 등장
   target.classList.add("fade-in");
 
   const changeText = () => {
@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       target.classList.remove("fade-out");
       target.classList.add("fade-in");
-    }, 500);
+    }, 600);
   };
 
-  setInterval(changeText, 3200);
+  setInterval(changeText, 3400);
 });
