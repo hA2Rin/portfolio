@@ -15,31 +15,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sections.forEach(section => observer.observe(section));
 
-  /* ===== Contact 강제 표시 ===== */
-  const contact = document.getElementById("contact");
-  if (contact) {
-    contact.classList.add("show");
-  }
-
-  /* ===== Rotating text ===== */
+  /* ===== Rotating text (smooth) ===== */
   const words = ["우리가 함께", "당신이", "내가", "다같이"];
   let index = 0;
   const target = document.getElementById("rotate-text");
 
-  if (target) {
-    setInterval(() => {
-      target.classList.add("fade-out");
+  const changeWord = () => {
+    target.classList.add("fade-out");
 
-      setTimeout(() => {
-        index = (index + 1) % words.length;
-        target.textContent = words[index];
-        target.classList.remove("fade-out");
-        target.classList.add("fade-in");
-      }, 500);
+    setTimeout(() => {
+      index = (index + 1) % words.length;
+      target.textContent = words[index];
+      target.classList.remove("fade-out");
+      target.classList.add("fade-in");
+    }, 600);
 
-      setTimeout(() => {
-        target.classList.remove("fade-in");
-      }, 1000);
-    }, 2600);
-  }
+    setTimeout(() => {
+      target.classList.remove("fade-in");
+    }, 1400);
+  };
+
+  setTimeout(() => {
+    changeWord();
+    setInterval(changeWord, 3200);
+  }, 1800);
 });
