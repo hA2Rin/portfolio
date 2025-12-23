@@ -43,6 +43,7 @@ body {
   color: var(--sub);
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.25s ease;
 }
 
 .nav a:hover {
@@ -55,15 +56,17 @@ body {
   width: calc(100% - 220px);
 }
 
-/* ===== Section ===== */
+/* ===== Section (Scroll Reveal) ===== */
 .section {
   padding: 120px 80px;
   max-width: 1000px;
   margin: 0 auto;
 
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(48px);
+  transition:
+    opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section.show {
@@ -75,25 +78,35 @@ body {
 .hero-title {
   font-size: 44px;
   margin-bottom: 20px;
-}
-
-#rotate-text {
-  color: var(--accent);
-}
-
-.fade-out {
-  opacity: 0;
-  transform: translateY(-6px);
-}
-
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
+  line-height: 1.35;
 }
 
 .hero-sub {
   color: var(--sub);
   font-size: 18px;
+  line-height: 1.7;
+}
+
+/* ===== Rotating Text (부드러운 핵심) ===== */
+#rotate-text {
+  display: inline-block;
+  color: var(--accent);
+  transition:
+    opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    filter 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#rotate-text.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+  filter: blur(2px);
+}
+
+#rotate-text.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
 }
 
 /* ===== Headings ===== */
@@ -101,7 +114,7 @@ h2 {
   border-bottom: 2px solid var(--accent);
   display: inline-block;
   padding-bottom: 6px;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 /* ===== Cards / Grid ===== */
@@ -114,8 +127,14 @@ h2 {
 .card {
   background: var(--panel);
   padding: 24px;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid #1e293b;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
 }
 
 /* ===== Flow ===== */
@@ -127,20 +146,27 @@ h2 {
 
 .flow-item {
   background: var(--panel);
-  padding: 20px;
-  border-radius: 12px;
+  padding: 22px;
+  border-radius: 14px;
   border: 1px solid #1e293b;
+  transition: transform 0.3s ease;
+}
+
+.flow-item:hover {
+  transform: translateY(-4px);
 }
 
 .flow-item span {
   color: var(--accent);
   font-weight: 700;
+  font-size: 14px;
 }
 
 /* ===== Server Table ===== */
 .server-table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
 }
 
 .server-table th,
@@ -152,6 +178,7 @@ h2 {
 
 .server-table th {
   color: var(--accent);
+  font-weight: 600;
 }
 
 /* ===== Text ===== */
@@ -159,7 +186,8 @@ h2 {
 .about-text {
   color: var(--sub);
   max-width: 720px;
-  line-height: 1.8;
+  line-height: 1.85;
+  margin-bottom: 24px;
 }
 
 .list {
@@ -172,7 +200,12 @@ h2 {
   color: var(--sub);
 }
 
+/* ===== Links ===== */
 a {
   color: var(--accent);
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
