@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>hA2Rin · Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== Sidebar ===== -->
+<aside class="sidebar">
+  <div class="brand">hA2Rin</div>
+  <nav class="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#bot">Bot</a>
+    <a href="#server">Server</a>
+    <a href="#project">Project</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</aside>
+
+<!-- ===== Main ===== -->
+<main class="main">
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="section hero">
+    <h1 class="hero-title">
+      미래는 <span id="rotate-text">우리가 함께</span> 만들어 나갑니다
+    </h1>
+    <p class="hero-sub">
+      디스코드 서버 운영과 자동화 경험을 바탕으로<br>
+      실제로 현장에서 쓰이는 시스템을 설계합니다.
+    </p>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p class="about-text">
+      안녕하세요. 저는 풀스택(Full stack) 개발자 <b>하이린</b>입니다.<br><br>
+
+      초등학교 1학년 때부터 컴퓨터를 접하며  
+      “이건 어떻게 만들어졌을까?”라는 호기심을 자연스럽게 갖게 되었습니다.<br>
+      초등학교 4학년 방과후 수업을 통해 블록 코딩인 <b>엔트리</b>를 처음 접했고,  
+      중학교 1학년 때는 <b>C와 C#</b>을 배우며 본격적으로 개발에 관심을 가지게 되었습니다.<br><br>
+
+      C#으로 게임 개발을 하던 중  
+      웹사이트와 서버는 어떻게 동작하는지 궁금해졌고,  
+      그 과정에서 <b>JavaScript</b>와 <b>Node.js</b>를 접하게 되었습니다.<br>
+      특히 Node.js를 통해 백엔드 서버를 직접 구축할 수 있다는 점에서  
+      큰 흥미를 느끼게 되었습니다.<br><br>
+
+      평소 좋아하던 버튜버 그룹인 <b>스텔라이브</b>의 알림을  
+      자동으로 전달하면 좋겠다는 생각에서  
+      Node.js를 사용해 <b>스텔봇(Stell Bot)</b>이라는 디스코드 봇을 직접 제작하게 되었습니다.<br><br>
+
+      저는 풀스택 개발자를  
+      “한 가지 언어만 깊게 파는 사람이 아닌,  
+      여러 기술을 연결해 전체 구조를 설계하는 개발자”라고 생각합니다.<br>
+      이 포트폴리오와 봇 역시 아직 완벽하다고 말할 수는 없지만,  
+      실제 운영 환경을 기준으로 꾸준히 개선해 나가고 있습니다.<br><br>
+
+      아래에는 제가 경험한 기술 스택과  
+      봇 개발·서버 운영 경험을 정리해 두었습니다.  
+      편하게 살펴봐 주시면 감사하겠습니다.
+    </p>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <p class="section-desc">
+      실제 프로젝트와 서버 운영에서 사용해 온 기술 스택입니다.<br>
+      단순 학습용이 아닌, 실사용 경험 위주로 정리했습니다.
+    </p>
+
+    <div class="grid">
+      <div class="card">JavaScript (Node.js)</div>
+      <div class="card">HTML / CSS</div>
+      <div class="card">Linux Server</div>
+      <div class="card">GCP VM</div>
+      <div class="card">PM2 / Process 관리</div>
+    </div>
+  </section>
+
+  <!-- ===== BOT ===== -->
+  <section id="bot" class="section">
+    <h2>Bot Architecture</h2>
+    <p class="section-desc">
+      단순히 명령어를 나열하는 봇이 아닌,<br>
+      <b>서버 운영 중 발생하는 문제를 구조적으로 해결</b>하는 것을 목표로 개발했습니다.
+    </p>
+
+    <div class="flow">
+      <div class="flow-item">
+        <span>01</span>
+        <h3>문제 인식</h3>
+        <p>반복 공지, 수동 관리,<br>로그 누락 문제 인식</p>
+      </div>
+      <div class="flow-item">
+        <span>02</span>
+        <h3>구조 설계</h3>
+        <p>권한 분리 구조,<br>서버별 설정 관리</p>
+      </div>
+      <div class="flow-item">
+        <span>03</span>
+        <h3>자동화</h3>
+        <p>관리 명령어,<br>로그·알림 자동화</p>
+      </div>
+      <div class="flow-item">
+        <span>04</span>
+        <h3>운영</h3>
+        <p>GCP Linux + PM2 기반<br>24시간 실운영</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVER ===== -->
+  <section id="server" class="section">
+    <h2>Server Management</h2>
+    <p class="section-desc">
+      직접 서버를 운영하거나 운영진으로 참여하며<br>
+      실제 커뮤니티 관리 경험을 쌓아왔습니다.
+    </p>
+
+    <table class="server-table">
+      <thead>
+        <tr>
+          <th>서버명</th>
+          <th>직책</th>
+          <th>운영 기간</th>
+          <th>규모</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>✨ 스텔라 아카이브 ✨</td>
+          <td>서버장</td>
+          <td>2025.12.8 ~ 현재</td>
+          <td>약 23명</td>
+        </tr>
+        <tr>
+          <td>📕 작은 스케치북</td>
+          <td>관리진</td>
+          <td>2025.08.11 ~ 현재</td>
+          <td>약 100명</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== PROJECT ===== -->
+  <section id="project" class="section">
+    <h2>Project</h2>
+    <p class="section-desc">
+      개인적으로 기획부터 운영까지 진행한 프로젝트입니다.
+    </p>
+
+    <div class="card">
+      <h3>Stell Bot</h3>
+      <p>
+        디스코드 서버 운영 효율을 높이기 위해 제작한<br>
+        관리·자동화 중심의 디스코드 봇입니다.
+      </p>
+      <ul class="list">
+        <li>서버별 맞춤 관리 명령어 제공</li>
+        <li>자동 로그 및 알림 시스템</li>
+        <li>권한 기반 기능 분리 구조</li>
+        <li>GCP Linux 환경에서 실운영</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p class="section-desc">
+      질문이나 문의 사항은 아래의 디스코드 또는 이메일로<br>
+      언제든 편하게 연락 주시면 신속하게 답변드리겠습니다.
+    </p>
+
+    <div class="card">
+      <p><b>Discord</b> : ha2rin__</p>
+      <p><b>Email</b> : hipolewlr@naver.com</p>
+      <p>
+        <b>GitHub</b> :
+        <a href="https://github.com/hA2Rin" target="_blank">
+          github.com/hA2Rin
+        </a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<script src="main.js"></script>
+</body>
+</html>
