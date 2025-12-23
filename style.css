@@ -275,3 +275,59 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* ================================
+   📱 Mobile Responsive (핵심)
+================================ */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  /* Sidebar → Topbar */
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+
+  /* Nav 가로 정렬 */
+  .nav {
+    flex-direction: row;
+    gap: 14px;
+    overflow-x: auto;
+  }
+
+  .nav a {
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  /* Main 영역 */
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .section {
+    padding: 80px 20px;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+  }
+}
+
