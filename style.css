@@ -277,57 +277,61 @@ a:hover {
 }
 
 /* ================================
-   📱 Mobile Responsive (핵심)
+   📱 Mobile Layout FIX (강제)
 ================================ */
 @media (max-width: 768px) {
+
+  /* body flex 제거 */
   body {
-    flex-direction: column;
+    display: block !important;
   }
 
-  /* Sidebar → Topbar */
+  /* Sidebar 완전 해제 */
   .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 20px 16px;
-    display: flex;
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
     align-items: center;
     justify-content: space-between;
+    padding: 16px 18px;
   }
 
   .brand {
-    margin-bottom: 0;
-    font-size: 20px;
+    margin: 0;
+    font-size: 18px;
   }
 
-  /* Nav 가로 정렬 */
   .nav {
-    flex-direction: row;
-    gap: 14px;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
     overflow-x: auto;
   }
 
   .nav a {
-    white-space: nowrap;
     font-size: 14px;
+    white-space: nowrap;
   }
 
-  /* Main 영역 */
+  /* Main 영역 밀림 제거 */
   .main {
-    margin-left: 0;
-    width: 100%;
+    margin-left: 0 !important;
+    width: 100% !important;
   }
 
   .section {
-    padding: 80px 20px;
+    padding: 72px 20px;
   }
 
   .hero-title {
     font-size: 30px;
+    line-height: 1.3;
   }
 
   .hero-sub {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
