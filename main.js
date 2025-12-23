@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach(section => observer.observe(section));
 
   /* ===== Rotating Text (Cinematic) ===== */
-  const words = ["우리가 함께", "당신이", "내가", "다같이"];
+  const words = ["우리가", "함께", "당신이", "내가", "모두 다 같이"];
   const target = document.getElementById("rotate-text");
   let index = 0;
 
@@ -40,3 +40,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setInterval(changeText, 3800);
 });
+
