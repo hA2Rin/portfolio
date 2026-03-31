@@ -1,5 +1,5 @@
 :root {
-  --bg: #f5f7fb;                 /* 전체 배경 (밝음) */
+  --bg: #f5f7fb;                  /* 전체 배경 (밝음) */
   --panel: rgba(255, 255, 255, 0.9);
   --panel-border: rgba(148, 163, 184, 0.35);
   --text: #0f172a;
@@ -235,21 +235,36 @@ h2::after {
   letter-spacing: 0.06em;
 }
 
-/* ===== Table ===== */
+/* ===== Table (Updated) ===== */
 .server-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 24px;
+  margin-top: 32px;
 }
 
 .server-table th,
 .server-table td {
-  padding: 14px;
+  padding: 18px 12px;
   border-bottom: 1px solid var(--panel-border);
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* 첫 번째 열(서버명)만 왼쪽 정렬하여 이모지 정렬 유지 */
+.server-table th:first-child,
+.server-table td:first-child {
+  text-align: left;
+  padding-left: 24px;
 }
 
 .server-table th {
   color: var(--accent);
+  font-weight: 700;
+}
+
+.server-table td {
+  color: var(--sub);
+  font-size: 15px;
 }
 
 /* ===== Text ===== */
@@ -280,13 +295,10 @@ a:hover {
    📱 Mobile Layout FIX (강제)
 ================================ */
 @media (max-width: 768px) {
-
-  /* body flex 제거 */
   body {
     display: block !important;
   }
 
-  /* Sidebar 완전 해제 */
   .sidebar {
     position: static !important;
     width: 100% !important;
@@ -315,7 +327,6 @@ a:hover {
     white-space: nowrap;
   }
 
-  /* Main 영역 밀림 제거 */
   .main {
     margin-left: 0 !important;
     width: 100% !important;
@@ -333,6 +344,13 @@ a:hover {
   .hero-sub {
     font-size: 15px;
   }
+
+  /* 모바일에서 테이블 스크롤 허용 (선택 사항) */
+  .server-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
 
 /* ===============================
@@ -343,5 +361,3 @@ a, a * {
   position: relative;
   z-index: 9999;
 }
-
-
