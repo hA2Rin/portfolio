@@ -5,216 +5,450 @@
   <title>yu2Rin · Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ===== Favicon ===== -->
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="./favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
 
-  <!-- 스타일 및 스크립트 (캐시 갱신 파라미터 적용) -->
-  <link rel="stylesheet" href="style.css?v=20261028">
-  <script src="main.js?v=20261028"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=20261029">
 </head>
 <body>
 
+<!-- ===== 배경 장식 ===== -->
+<div class="bg-mesh"></div>
+<div class="bg-dot"></div>
+
 <!-- ===== Sidebar ===== -->
-<aside class="sidebar">
-  <div class="brand">yu2Rin</div>
-  <nav class="nav">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#bot">Bot</a>
-    <a href="#server">Server</a>
-    <a href="#project">Project</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-inner">
+    <div class="brand">
+      <span class="brand-name">yu2Rin</span>
+      <span class="brand-dot">.</span>
+    </div>
+    <nav class="nav">
+      <a href="#home" class="nav-link active">
+        <span class="nav-icon">⌂</span>
+        <span>Home</span>
+      </a>
+      <a href="#about" class="nav-link">
+        <span class="nav-icon">✦</span>
+        <span>About</span>
+      </a>
+      <a href="#skills" class="nav-link">
+        <span class="nav-icon">◈</span>
+        <span>Skills</span>
+      </a>
+      <a href="#bot" class="nav-link">
+        <span class="nav-icon">⬡</span>
+        <span>Bot</span>
+      </a>
+      <a href="#server" class="nav-link">
+        <span class="nav-icon">◉</span>
+        <span>Server</span>
+      </a>
+      <a href="#project" class="nav-link">
+        <span class="nav-icon">◇</span>
+        <span>Projects</span>
+      </a>
+      <a href="#contact" class="nav-link">
+        <span class="nav-icon">✉</span>
+        <span>Contact</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <span class="mono">v2.0 · 2026</span>
+    </div>
+  </div>
 </aside>
+
+<!-- ===== 모바일 헤더 ===== -->
+<header class="mobile-header">
+  <span class="brand-name">yu2Rin<span class="brand-dot">.</span></span>
+  <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
 <!-- ===== Main ===== -->
 <main class="main">
 
   <!-- ===== HERO ===== -->
   <section id="home" class="section hero">
+    <div class="hero-eyebrow">
+      <span class="mono">Developer & Bot Creator</span>
+    </div>
     <h1 class="hero-title">
-      안정적인 서버와 코드로<br>
-      <span id="rotate-text">가치를 만들어갑니다</span>
+      미래는 <span id="rotate-text">우리가 함께</span><br>
+      만들어 나갑니다
     </h1>
     <p class="hero-sub">
-      웹사이트 개발부터 실시간 봇 자동화 시스템 구축,<br>
-      그리고 24/7 안정적인 리눅스 서버 인프라 유지보수까지 책임집니다.
+      웹사이트 개발부터 디스코드 봇 자동화 시스템 구축,<br>
+      그리고 커뮤니티 서버 운영 및 유지보수까지 책임집니다.
     </p>
+    <div class="hero-tags">
+      <span class="tag">Web Dev</span>
+      <span class="tag">Bot Dev</span>
+      <span class="tag">Linux Server</span>
+      <span class="tag">GCP</span>
+    </div>
+    <a href="#about" class="hero-scroll">
+      <span>스크롤 내려서 더 알아보기</span>
+      <span class="scroll-arrow">↓</span>
+    </a>
   </section>
 
   <!-- ===== ABOUT ===== -->
   <section id="about" class="section">
-    <h2>About Me</h2>
-    <p class="about-text">
-      안녕하세요, <b>유이린(yu2Rin)</b>입니다.<br><br>
-      사용자가 편리하게 이용할 수 있는 <b>반응형 웹사이트 개발</b>과 실시간 커뮤니티 운영을 돕는 <b>자동화 봇 개발</b>을 주로 진행하고 있습니다.<br>
-      단순 기능 구현에 그치지 않고, <b>GCP Linux 서버 환경과 PM2</b>를 활용해 다운타임 없는 24시간 실시간 무중단 서비스 운영 및 <b>철저한 장애 대응·유지보수</b> 경험을 보유하고 있습니다.
-    </p>
+    <div class="section-header">
+      <span class="section-num mono">01</span>
+      <h2>About Me</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text-wrap">
+        <p class="about-text">
+          안녕하세요, <strong>유이린(yu2Rin)</strong>입니다.<br><br>
+          사용자가 직접 편리하게 이용할 수 있는 <strong>반응형 웹사이트 개발</strong>과
+          실시간 커뮤니티 운영을 돕는 <strong>자동화 봇 개발</strong>을 주로 진행하고 있습니다.<br><br>
+          단순히 작동하는 것만이 아닌, <strong>GCP Linux 서버 환경과 PM2</strong>를 기반으로
+          24시간 무중단 운영과 철저한 장애 대응·유지보수 경험을 보유하고 있습니다.
+        </p>
+      </div>
+      <div class="about-cards">
+        <div class="about-stat">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">직접 운영한 Discord 서버</span>
+        </div>
+        <div class="about-stat">
+          <span class="stat-num">24/7</span>
+          <span class="stat-label">무중단 봇 실운영</span>
+        </div>
+        <div class="about-stat">
+          <span class="stat-num">Full</span>
+          <span class="stat-label">Stack Developer</span>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ===== SKILLS ===== -->
   <section id="skills" class="section">
-    <h2>Skills</h2>
-    <p class="section-desc">
-      웹 개발, 서버 인프라 유지보수, 자동화 봇 제작에 실제로 활용해 온 핵심 기술 스택입니다.
-    </p>
+    <div class="section-header">
+      <span class="section-num mono">02</span>
+      <h2>Skills</h2>
+    </div>
+    <p class="section-desc">웹 개발, 서버 인프라 유지보수, 봇 자동화에 실제로 활용해 온 기술 스택입니다.</p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>HTML5 / CSS3 / JavaScript<br>반응형 UI & 웹 인터랙션 최적화</p>
+    <div class="skills-wrap">
+
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <span class="skill-icon">◈</span> Web Development
+        </div>
+        <div class="skill-items">
+          <span class="skill-badge">HTML5</span>
+          <span class="skill-badge">CSS3</span>
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">반응형 UI</span>
+          <span class="skill-badge">GitHub Pages</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>Server & Maintenance</h3>
-        <p>Linux (Ubuntu) / GCP VM<br>PM2 프로세스 관리 & 실시간 로그 모니터링</p>
+
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <span class="skill-icon">⬡</span> Bot & Automation
+        </div>
+        <div class="skill-items">
+          <span class="skill-badge">Node.js</span>
+          <span class="skill-badge">Discord.js</span>
+          <span class="skill-badge">REST API</span>
+          <span class="skill-badge">SQL / DB 연동</span>
+          <span class="skill-badge">이벤트 처리</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>Bot Automation</h3>
-        <p>Node.js / Discord.js<br>REST API & SQL 데이터베이스 연동</p>
+
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <span class="skill-icon">◉</span> Server & Infra
+        </div>
+        <div class="skill-items">
+          <span class="skill-badge">Linux (Ubuntu)</span>
+          <span class="skill-badge">GCP VM</span>
+          <span class="skill-badge">PM2</span>
+          <span class="skill-badge">무중단 운영</span>
+          <span class="skill-badge">로그 모니터링</span>
+        </div>
       </div>
-      <div class="card">
-        <h3>Languages</h3>
-        <p>JavaScript / Node.js<br>C / C++ / C# 기초 및 응용</p>
+
+      <div class="skill-group">
+        <div class="skill-group-title">
+          <span class="skill-icon">✦</span> Languages
+        </div>
+        <div class="skill-items">
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">C / C++</span>
+          <span class="skill-badge">C#</span>
+          <span class="skill-badge">SQL</span>
+        </div>
       </div>
+
     </div>
   </section>
 
   <!-- ===== BOT ===== -->
   <section id="bot" class="section">
-    <h2>Bot & System Architecture</h2>
-    <p class="section-desc">
-      문제를 사전에 방지하고 장기적인 <b>운영 및 유지보수가 용이한</b> 시스템 구조를 설계합니다.
-    </p>
+    <div class="section-header">
+      <span class="section-num mono">03</span>
+      <h2>Bot Development</h2>
+    </div>
+    <p class="section-desc">단순히 작동하는 봇이 아닌, 실제 커뮤니티에서 쓰이는 봇을 설계합니다.</p>
 
+    <!-- 대표 봇: 코린 -->
+    <div class="bot-card">
+      <div class="bot-card-header">
+        <div class="bot-avatar">코린</div>
+        <div class="bot-info">
+          <h3 class="bot-name">코린 봇 <span class="bot-badge">대표 봇</span></h3>
+          <p class="bot-tagline">Discord 서버 관리 자동화 봇</p>
+        </div>
+      </div>
+
+      <div class="bot-desc">
+        <p class="bot-catchphrase"><strong>서버 관리, 코린이 도와드릴게요! 🛠️💙</strong></p>
+        <p>
+          코린은 복잡한 Discord 서버를 조금 더 깔끔하고 편하게 관리할 수 있도록 도와주는 서버 관리 봇이에요!
+        </p>
+        <ul class="bot-features">
+          <li>🎙️ 음성 채널을 깔끔하게 정리하고</li>
+          <li>💬 채팅 채널도 보기 좋게 관리하고</li>
+          <li>📁 필요한 카테고리와 채널을 쉽게 구성하고</li>
+          <li>⚙️ 서버 설정도 간편하게 관리할 수 있어요!</li>
+        </ul>
+        <p class="bot-outro">
+          처음 서버를 만들 때부터<br>
+          서버가 점점 커지면서 복잡해질 때까지<br>
+          코린이 옆에서 편하게 도와드릴게요. ✨
+        </p>
+        <p class="bot-cta-text"><strong>귀찮은 서버 관리, 이제 코린에게 맡겨보세요! 💙</strong></p>
+      </div>
+
+      <div class="bot-stack">
+        <span class="skill-badge">Node.js</span>
+        <span class="skill-badge">Discord.js</span>
+        <span class="skill-badge">GCP Linux</span>
+        <span class="skill-badge">PM2</span>
+        <span class="skill-badge">24/7 실운영</span>
+      </div>
+
+      <a class="bot-invite-btn"
+         href="https://discord.com/oauth2/authorize?client_id=1554824324572119060&permissions=8&scope=bot%20applications.commands"
+         target="_blank">
+        💙 코린 봇 초대하기
+      </a>
+    </div>
+
+    <!-- 봇 개발 플로우 -->
+    <div class="flow-title">개발 프로세스</div>
     <div class="flow">
       <div class="flow-item">
-        <span>01</span>
-        <h3>문제 분석</h3>
-        <p>반복 수동 업무, 관리 권한 혼선,<br>로그 누락 등 운영상 병목 파악</p>
+        <span class="flow-num">01</span>
+        <h4>문제 분석</h4>
+        <p>반복 수동 업무, 관리 권한 혼선, 로그 누락 등 운영상 병목 파악</p>
       </div>
       <div class="flow-item">
-        <span>02</span>
-        <h3>구조 설계</h3>
-        <p>모듈별 권한 분리 설계 및<br>서버별 독립 데이터베이스 설정</p>
+        <span class="flow-num">02</span>
+        <h4>구조 설계</h4>
+        <p>모듈별 권한 분리 설계 및 서버별 독립 데이터 관리</p>
       </div>
       <div class="flow-item">
-        <span>03</span>
-        <h3>자동화 개발</h3>
-        <p>실시간 자동 로그, 관리자 명령어,<br>예외 처리 및 알림 자동화</p>
+        <span class="flow-num">03</span>
+        <h4>자동화 개발</h4>
+        <p>실시간 로그, 관리자 명령어, 예외 처리 및 알림 자동화</p>
       </div>
       <div class="flow-item">
-        <span>04</span>
-        <h3>무중단 유지보수</h3>
-        <p>GCP Linux + PM2 기반 자동 재부팅,<br>실시간 모니터링 및 주기적 패치</p>
+        <span class="flow-num">04</span>
+        <h4>무중단 운영</h4>
+        <p>GCP Linux + PM2 기반 자동 재부팅, 실시간 모니터링 및 패치</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== SERVER ===== -->
+  <!-- ===== SERVER MANAGEMENT ===== -->
   <section id="server" class="section">
-    <h2>Server Management</h2>
+    <div class="section-header">
+      <span class="section-num mono">04</span>
+      <h2>Server Management</h2>
+    </div>
     <p class="section-desc">
       직접 커뮤니티 서버를 운영하거나 관리진으로 참여하며 유저 소통과 서버 안정성을 책임져 왔습니다.
     </p>
 
-    <table class="server-table">
-      <thead>
-        <tr>
-          <th>서버명</th>
-          <th>직책</th>
-          <th>운영 기간</th>
-          <th>규모</th>
-          <th>초대링크</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>✨ 스텔라 아카이브 ✨</td>
-          <td>서버장</td>
-          <td>2025.12.8 ~ 현재</td>
-          <td>인원 수 : 약 30명</td>
-          <td>
-            <a href="https://discord.gg/zPWXCXZ4cr" target="_blank">바로가기</a>
-          </td>
-        </tr>
-        <tr>
-          <td>📕 작은 스케치북</td>
-          <td>관리진</td>
-          <td>2025.08.11 ~ 2026.04.01</td>
-          <td>인원 수 : 약 120명</td>
-          <td>-서버 운영 X-</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="server-list">
+
+      <div class="server-row">
+        <div class="server-row-main">
+          <div class="server-name">✨ 스텔라 아카이브 ✨</div>
+          <div class="server-meta-wrap">
+            <span class="server-role owner">서버장</span>
+            <span class="server-period">2025.12.08 ~ 현재</span>
+            <span class="server-size">약 30명</span>
+          </div>
+        </div>
+        <a href="https://discord.gg/86HG4vz6AE" target="_blank" class="server-link-btn">참여하기</a>
+      </div>
+
+      <div class="server-row">
+        <div class="server-row-main">
+          <div class="server-name">📕 작은 스케치북</div>
+          <div class="server-meta-wrap">
+            <span class="server-role admin">관리자</span>
+            <span class="server-period">2025.08.11 ~ 2026.04.01</span>
+            <span class="server-size">약 120명</span>
+          </div>
+        </div>
+        <span class="server-link-closed">-서버 운영X-</span>
+      </div>
+
+      <div class="server-row">
+        <div class="server-row-main">
+          <div class="server-name">
+            𝓢𝓱𝓲𝔃𝓾𝓴𝓲 𝓣𝓸𝓪
+            <span class="server-note">친목 서버 아닙니다.</span>
+          </div>
+          <div class="server-meta-wrap">
+            <span class="server-role admin">관리자</span>
+            <span class="server-period">참여 중</span>
+          </div>
+        </div>
+        <a href="https://discord.gg/WDWQAAYNqg" target="_blank" class="server-link-btn">참여하기</a>
+      </div>
+
+    </div>
   </section>
 
-  <!-- ===== PROJECT ===== -->
+  <!-- ===== PROJECTS ===== -->
   <section id="project" class="section">
-    <h2>Projects</h2>
-    <p class="section-desc">
-      기획부터 개발, 인프라 배포 및 유지보수까지 직접 수행한 프로젝트입니다.
-    </p>
+    <div class="section-header">
+      <span class="section-num mono">05</span>
+      <h2>Projects</h2>
+    </div>
+    <p class="section-desc">기획부터 개발, 인프라 배포 및 유지보수까지 직접 수행한 프로젝트입니다.</p>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Stell Bot (Discord Bot)</h3>
-        <p>
-          디스코드 커뮤니티 관리 효율을 극대화하기 위해 개발한 자동화 봇입니다.
+    <div class="project-grid">
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-type mono">Bot Development</div>
+          <h3 class="project-title">코린 (Korin Bot)</h3>
+        </div>
+        <p class="project-desc">
+          Discord 커뮤니티의 서버 관리 효율을 극대화하기 위해 제작한 자동화 관리 봇입니다.
         </p>
-        <ul class="list">
+        <ul class="project-list">
           <li>서버별 커스텀 관리 명령어 및 권한 제어</li>
+          <li>채널·카테고리 자동 구성 및 정리 기능</li>
           <li>실시간 관리 로그 및 이벤트 알림 시스템</li>
-          <li>GCP 클라우드 인프라 기반 24시간 실운영 및 에러 트래킹</li>
+          <li>GCP 클라우드 24시간 실운영 및 에러 트래킹</li>
         </ul>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="skill-badge sm">Node.js</span>
+            <span class="skill-badge sm">Discord.js</span>
+            <span class="skill-badge sm">GCP</span>
+          </div>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Web Service & Portfolio</h3>
-        <p>
-          직관적인 UI와 반응형 웹 표준을 고려하여 제작된 포트폴리오 웹사이트입니다.
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-type mono">Web Development</div>
+          <h3 class="project-title">포트폴리오 웹사이트</h3>
+        </div>
+        <p class="project-desc">
+          직관적인 UI와 반응형 웹 표준을 고려하여 직접 설계 및 개발한 개인 포트폴리오 사이트입니다.
         </p>
-        <ul class="list">
+        <ul class="project-list">
           <li>모바일/데스크톱 대응 반응형 레이아웃 설계</li>
-          <li>CSS 키프레임 및 JS 인터랙션을 활용한 매끄러운 사용자 경험</li>
-          <li>GitHub Pages를 활용한 지속적 배포 및 버전 관리</li>
+          <li>CSS 애니메이션 및 JS 인터랙션 최적화</li>
+          <li>GitHub Pages + 커스텀 도메인 지속적 배포</li>
+          <li>캐시 전략 및 성능 최적화 적용</li>
         </ul>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="skill-badge sm">HTML/CSS</span>
+            <span class="skill-badge sm">JavaScript</span>
+            <span class="skill-badge sm">GitHub Pages</span>
+          </div>
+        </div>
       </div>
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-type mono">Server Hosting & Maintenance</div>
+          <h3 class="project-title">GCP Linux 서버 인프라</h3>
+        </div>
+        <p class="project-desc">
+          봇 및 웹 서비스의 안정적인 운영을 위한 Google Cloud Platform 기반 서버 인프라 구축 및 유지보수입니다.
+        </p>
+        <ul class="project-list">
+          <li>GCP VM 인스턴스 프로비저닝 및 네트워크 설정</li>
+          <li>PM2를 이용한 다중 프로세스 무중단 운영 관리</li>
+          <li>장애 발생 시 자동 재시작 및 알림 처리</li>
+          <li>정기적 보안 패치 및 리소스 모니터링</li>
+        </ul>
+        <div class="project-footer">
+          <div class="project-tags">
+            <span class="skill-badge sm">Linux</span>
+            <span class="skill-badge sm">GCP</span>
+            <span class="skill-badge sm">PM2</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="section">
-    <h2>Contact</h2>
+    <div class="section-header">
+      <span class="section-num mono">06</span>
+      <h2>Contact</h2>
+    </div>
     <p class="section-desc">
-      웹/봇 개발 의뢰, 서버 유지보수 및 협업 제안은 아래 연락처로 언제든 편하게 연락 부탁드립니다.
+      질문이나 문의 사항은 아래로 편하게 연락 주세요.
     </p>
 
-    <div class="card">
-      <p><b>Discord</b> : yu2rin__</p>
-
-      <p>
-        <b>Email</b> :
-        <a href="mailto:hipolewlr@naver.com">
-          hipolewlr@naver.com
-        </a>
-      </p>
-
-      <p>
-        <b>GitHub</b> :
-        <a href="https://github.com/hA2Rin" target="_blank">
-          github.com/hA2Rin
-        </a>
-      </p>
+    <div class="contact-grid">
+      <a class="contact-item" href="https://discord.com/users/yu2rin__">
+        <span class="contact-icon">💬</span>
+        <div class="contact-detail">
+          <span class="contact-label">Discord</span>
+          <span class="contact-value">yu2rin__</span>
+        </div>
+      </a>
+      <a class="contact-item" href="mailto:hipolewlr@naver.com">
+        <span class="contact-icon">✉️</span>
+        <div class="contact-detail">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">hipolewlr@naver.com</span>
+        </div>
+      </a>
+      <a class="contact-item" href="https://github.com/hA2Rin" target="_blank">
+        <span class="contact-icon">⌥</span>
+        <div class="contact-detail">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/hA2Rin</span>
+        </div>
+      </a>
     </div>
   </section>
 
 </main>
 
-<script src="main.js"></script>
+<script src="main.js?v=20261029"></script>
 </body>
 </html>
