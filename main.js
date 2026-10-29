@@ -1,3 +1,7 @@
+/* ================================================
+   yu2Rin Portfolio — main.js v2.2
+================================================ */
+
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ===== Section 등장 애니메이션 ===== */
@@ -56,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3500);
   }
 
-  /* ===== 모바일 메뉴 ===== */
+  /* ===== 모바일 메뉴 및 오버레이 ===== */
   const menuBtn = document.getElementById("menuBtn");
   const sidebar = document.getElementById("sidebar");
   const overlay = document.getElementById("sidebarOverlay");
@@ -85,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 오버레이 클릭 시 닫기
     overlay.addEventListener("click", closeMenu);
 
-    // 링크 클릭 시 닫기
+    // 메뉴 링크 클릭 시 닫기
     sidebar.querySelectorAll(".nav-link").forEach(link => {
       link.addEventListener("click", closeMenu);
     });
